@@ -1,7 +1,6 @@
 import { calculateInvestmentResults, formatter } from "../util/investment.js";
-
+const results = []; // an array  is create   but will not be reset due to being out of scope
 export default function Results({ input }) {
-  const results = [];
   calculateInvestmentResults(input, results);
   if (results.length === 0) {
     return <p>Invalid input data provided.</p>;
